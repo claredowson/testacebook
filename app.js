@@ -1,11 +1,13 @@
 var express = require('express');
 var chalk = require('chalk');
 var debug = require('debug')('app');
-var morgan = require('morgan')
+var morgan = require('morgan');
 // you shoudl leave a new line between your requires
 // and the rest of the program
 
 var app = express();
+
+app.use(morgan('tiny'));
 
 // executes a function for any requests
 // to the root route
