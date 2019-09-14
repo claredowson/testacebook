@@ -10,6 +10,14 @@ var app = express();
 
 app.use(morgan('tiny'));
 
+//Static Filepaths
+
+app.use(express.static(path.join(__dirname, '/public'))); // sets up static directory for static files
+app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css/')));
+app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
+app.use('/js', express.static(path.join(__dirname, 'node_modules/popper.js/dist/')))
+app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist/')));
+
 // executes a function for any requests
 // to the root route
 // serves up the static 'index.html' page
