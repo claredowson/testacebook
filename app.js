@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
 });
 
 // Defines the listening port
-var port = 4040;
+var port = process.env.PORT || 4040;
 app.listen(port, function () {
   debug(`listening on port ${chalk.green(port)}`);
 });
