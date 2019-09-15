@@ -8,6 +8,11 @@ var app = express();
 
 app.use(morgan('tiny'));
 
+// View engine setup
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+
 // Set static filepaths
 
 app.use(express.static(path.join(__dirname, '/public'))); // sets up static directory for static files
@@ -18,7 +23,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist/'))
 
 // Serves the static 'index.html' page for the '/' route
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'views/index.html'));
+  res.render('index');
 });
 
 // Defines the listening port
