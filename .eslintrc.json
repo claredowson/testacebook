@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true
+    },
+
+    "parserOptions": {
+        "ecmaVersion": 5
+    },
+
+    "extends": [
+        "eslint-config-airbnb-es5"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "babel-eslint",
+    "rules": {
+    }
+}
