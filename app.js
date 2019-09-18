@@ -23,7 +23,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist/'))
 
 // Serves the static 'index.html' page for the '/' route
 app.get('/', function (req, res) {
-  res.render('index', { title: 'My Library App' });
+  res.render('tindex', { title: 'AceBook' });
 });
 
 // Defines the listening port
